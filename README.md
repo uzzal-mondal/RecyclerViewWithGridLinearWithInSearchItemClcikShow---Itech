@@ -40,67 +40,67 @@ myAdapter = new MyAdapter(this,proTitle,proDesc,images);
 
 ## 16.	viewHolder use kori , karon akta single view ke hold korbe.  
 
-17.	View take return kore dile chole jabe  viewHolder class er kase, r seta extends korbe MyViewHolder class.
+## 17.	View take return kore dile chole jabe  viewHolder class er kase, r seta extends korbe MyViewHolder class.
 
 Jehetu view ta 
 
- return new MyViewHolder(view);
+##  return new MyViewHolder(view);
 
  return kore disi and chole ashes viewHolder er moddhe,  extends korse myViewHolder k . akon ekhane sokon data ashes parameter item view er moddhe.  
 Akhon, ItemView er moddhe amara item view ke niye data gulo find korte parbo.
 
-18.	Data find kora sesh, data set korte hole amake jete hobe onBind ViewHolder er moddhe.
+## 18.	Data find kora sesh, data set korte hole amake jete hobe onBind ViewHolder er moddhe.
 
-19 .  onBindViewHolder er moddhe amara data gulo set korte parbo.   myViewHolder er object er madhome  call korbo textView ke er setText method ke call korbo. Then parameter dibo amar constructer er assign kora textView then tar position diye dibo.. 
+## 19 .  onBindViewHolder er moddhe amara data gulo set korte parbo.   myViewHolder er object er madhome  call korbo textView ke er setText method ke call korbo. Then parameter dibo amar constructer er assign kora textView then tar position diye dibo.. 
 
 myViewHolder.titleTv.setText(proTitle[position]) 
 
-19.	getItemCount() – j kono akta array er length diye dibo.
+## 19.	getItemCount() – j kono akta array er length diye dibo.
 
-20.	recyClerView.setAdapter(myAdapter);
+## 20.	recyClerView.setAdapter(myAdapter);
 
-21.	recyclerview.setLayoutManager(LinearLayoutManager and context diye dibo, this)
+## 21.	recyclerview.setLayoutManager(LinearLayoutManager and context diye dibo, this)
 
-Recycler view Listner Adding.
+# Recycler view Listner Adding.
 
-1.	At first MyAdapter class a chole ashbo. With ekhane j ViewHolder class ti ke extends korsilam, sekhane ami duita interface implement korbo. 
+## 1.	At first MyAdapter class a chole ashbo. With ekhane j ViewHolder class ti ke extends korsilam, sekhane ami duita interface implement korbo. 
 #OnClickListner.
 #OnLongClcikListner.
 Then alt+enter method implement.
 
-2.	Item view er sathe ei duita listener set kore dibo. 
+## 2.	Item view er sathe ei duita listener set kore dibo. 
 # SetOnClickListenr(this);
 # SetOnLongClcikListner(this);
 
-3.	Interface make kore nibo, 
+## 3.	Interface make kore nibo, 
 Private static ClickListner clickListner with sobar nise eta use korbo.
 // 2 ta method create kore nilam.
 void onItemClcik(int position, View view);
 void onItemLongClcik(int positin, View view);
 
 
-4.	Public void setOnItemClickListenr make kore nibo. Jeta muloto amara main activity theke call korbo. J interface make korsi clickListner ei variable dara interface take ami receive korbo.
+## 4.	Public void setOnItemClickListenr make kore nibo. Jeta muloto amara main activity theke call korbo. J interface make korsi clickListner ei variable dara interface take ami receive korbo.
 
-5.	Amara j class a asi MyAdapter.ClcikListner and user jeta pthabe MainActivity tekhe setake amara receive korbo..
+## 5.	Amara j class a asi MyAdapter.ClcikListner and user jeta pthabe MainActivity tekhe setake amara receive korbo..
 
-6.	MyAdapter.clcikListner = clcikListner. 
+## 6.	MyAdapter.clcikListner = clcikListner. 
 Ei clcikListner holo private static clickListner declare kora seta. = second clickListner holo eta amader manin activity theke receive korete hobe eijonno.
 
-7.	MainActivity theke listener ta set kore dibo. maAdapter er sathe.
-8.	MainActivity theke ei gula access korar jonno ei listener gulor help niyesi.
-9.	Listner take inter face er madhome set kore diyesi. Method gulo call diyesi. OnItem and OnItemLongClcik okey.
+## 7.	MainActivity theke listener ta set kore dibo. maAdapter er sathe.
+## 8.	MainActivity theke ei gula access korar jonno ei listener gulor help niyesi.
+## 9.	Listner take inter face er madhome set kore diyesi. Method gulo call diyesi. OnItem and OnItemLongClcik okey.
 
-10.	Akon amra saisi amader j position ta click hobe sei position ta return korte.
-11 j variable er madhoem kaj ta korobo seta holo click listener.
+## 10.	Akon amra saisi amader j position ta click hobe sei position ta return korte.
+## 11 j variable er madhoem kaj ta korobo seta holo click listener.
 
-11.	List view er moton automatic onITem click listener make korte parbona ei jonno amara eta make kore nieyesi. 
+## 11.	List view er moton automatic onITem click listener make korte parbona ei jonno amara eta make kore nieyesi. 
 
-12.	 Seta kivabe, akta interface make kore niyesi, sei interface er moddhe at first amara click listener ta receive kore nibo mainActivity theke. Tai seta initialize kore nieyesi. 
+## 12.	 Seta kivabe, akta interface make kore niyesi, sei interface er moddhe at first amara click listener ta receive kore nibo mainActivity theke. Tai seta initialize kore nieyesi. 
 
-13.	Interface a 02 ta method use kore niyesi onITemClick, onItemLongClcik. 
+## 13.	Interface a 02 ta method use kore niyesi onITemClick, onItemLongClcik. 
 
-14.	Erpor amara setake adapter er sathe set kore diyesi. And ekhan theke interface pass kore diyesi. Sathe sathe 2 ta method chole ashbe jamon ta amara koresi interface er moddhe..   and ekhane j kaj ta amra korsi onClick, onLongClick.  
+## 14.	Erpor amara setake adapter er sathe set kore diyesi. And ekhan theke interface pass kore diyesi. Sathe sathe 2 ta method chole ashbe jamon ta amara koresi interface er moddhe..   and ekhane j kaj ta amra korsi onClick, onLongClick.  
 
-15.	 onClcik, onLongClick a jokon click korbe ekhaner theke position and view ta return korbe.
+## 15.	 onClcik, onLongClick a jokon click korbe ekhaner theke position and view ta return korbe.
 
-16.	Must item view er sathe listener gulo add kore dite hobe. Implements kore nite hobe 2 ta method. onClcik, onLongClick.
+## 16.	Must item view er sathe listener gulo add kore dite hobe. Implements kore nite hobe 2 ta method. onClcik, onLongClick.
