@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RecyclerViewGridLinear</string>
+    <string name="title_text_id">Title</string>
+</resources>
